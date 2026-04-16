@@ -324,6 +324,7 @@ module {
               case (#Verified) "verified";
               case (#Pending) "pending";
               case (#Rejected(_)) "rejected";
+              case (#External) "external";
             });
             tier = ?tierToText(listing.latest_version.security_tier);
           }
