@@ -1,0 +1,12 @@
+canisters:
+  - name: app-store-scout
+    build:
+      steps:
+        - type: script
+          commands:
+            - $(mops toolchain bin moc) src/main.mo $(mops sources) -o "$ICP_WASM_OUTPUT_PATH"
+
+environments:
+  - name: ic
+    network: ic
+    canisters: [app-store-scout]
