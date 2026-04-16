@@ -1,0 +1,13 @@
+{
+  "canisters": {
+    "app_store_scout": {
+      "main": "src/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "mops sources"
+    }
+  }
+}

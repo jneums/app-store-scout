@@ -1,0 +1,43 @@
+name: app-store-scout
+namespace: io.github.jneums.app-store-scout
+title: App Store Scout
+version: 0.1.0
+description: Discover, inspect, and compare Prometheus App Store apps using the canonical on-chain MCP registry.
+category: Developer Tools
+mcp_path: /mcp
+repo_url: https://github.com/jneums/app-store-scout
+payment: null
+tags:
+  - discovery
+  - app-store
+  - search
+  - certificates
+  - registry
+  - prometheus-protocol
+submission:
+  name: App Store Scout
+  description: Discover, inspect, and compare Prometheus App Store apps using the canonical on-chain MCP registry.
+  publisher: Prometheus Protocol
+  category: Developer Tools
+  deployment_type: global
+  repo_url: https://github.com/jneums/app-store-scout
+  mcp_path: /mcp
+  why_this_app: Gives agents and users a fast way to discover, inspect, and compare Prometheus App Store apps using the canonical on-chain registry and certificate data.
+  key_features:
+    - Search apps by keyword, category, verification tier, and tags.
+    - Inspect full app details including MCP URL, repo, visuals, and metadata.
+    - Compare multiple apps side by side for evaluation and selection.
+    - Review certificate and verification summaries from live registry data.
+    - Browse recent releases, categories, and tags from the live app store index.
+  tags:
+    - discovery
+    - app-store
+    - search
+    - certificates
+    - registry
+    - prometheus-protocol
+  visuals:
+    icon_url: https://github.com/jneums/app-store-scout/releases/download/v0.1.0-assets/icon-app-store-scout.webp
+    banner_url: https://github.com/jneums/app-store-scout/releases/download/v0.1.0-assets/banner-app-store-scout.webp
+    gallery_images:
+      - https://github.com/jneums/app-store-scout/releases/download/v0.1.0-assets/banner-app-store-scout.webp
