@@ -44,6 +44,7 @@ module {
   };
 
   public type AppListingStatus = {
+    #External;
     #Pending;
     #Rejected : { reason : Text };
     #Verified;
@@ -118,21 +119,37 @@ module {
     #Divergence : DivergenceRecord;
   };
 
+  public type RunBountyResult = {
+    metadata : ICRC16;
+    result : { #Invalid; #Valid };
+    trx_id : ?Nat;
+  };
+
+  public type ClaimRecord = {
+    caller : Principal;
+    claim_account : ?{ owner : Principal; subaccount : ?Blob };
+    claim_id : Nat;
+    claim_metadata : ICRC16Map;
+    result : ?RunBountyResult;
+    submission : ICRC16;
+    time_submitted : Nat;
+  };
+
   public type Bounty = {
-    claims : [ICRC16];
+    bounty_id : Nat;
+    bounty_metadata : ICRC16Map;
+    challenge_parameters : ICRC16;
+    claimed : ?Nat;
+    claimed_date : ?Nat;
+    claims : [ClaimRecord];
     created : Nat;
     creator : Principal;
-    token_amount : Nat;
-    bounty_metadata : ICRC16Map;
-    claimed : ?Nat;
-    token_canister_id : Principal;
-    challenge_parameters : ICRC16;
-    validation_call_timeout : Nat;
-    bounty_id : Nat;
-    validation_canister_id : Principal;
-    claimed_date : ?Nat;
-    timeout_date : ?Nat;
     payout_fee : Nat;
+    timeout_date : ?Nat;
+    token_amount : Nat;
+    token_canister_id : Principal;
+    validation_call_timeout : Nat;
+    validation_canister_id : Principal;
   };
 
   public type AppVersionDetails = {
